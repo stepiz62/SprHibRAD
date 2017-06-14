@@ -1,0 +1,286 @@
+@CHARSET "ISO-8859-1";
+
+
+body {
+	font-family: "Arial";
+	background-color: rgba(220, 255, 255, 0.5);
+	/*	background-image: url(' bi-background-frame.png '); 
+	background-attachment: fixed;
+	background-size: 100% auto; */
+}
+
+td {
+	color: rgba(0, 0, 0, 0.8);
+}
+
+.label {
+	nowrap;
+	font-style: italic;	
+	color: rgba(0, 0, 0, 0.5);
+	text-align: right;
+	padding: 0 7px 0 0; 
+}
+
+.menuItem {
+	padding: 10px 10px 10px 10px; /* top right bottom left  */
+}
+
+.menuItem2 {
+	padding: 10px 10px 10px 10px;
+}
+
+.navItem1 {
+	padding: 10px 2x 10px 18px;
+}
+
+.navItem2 {
+	padding: 10px 20px 10px 2px;
+}
+
+.navItem12 {
+	padding: 10px 10px 10px 10px;
+}
+
+.navItem22 {
+	padding: 10px 10px 10px 10px;
+}
+
+
+.searchbox {
+	
+}
+
+.searchbox2 {
+	border: 1px;
+	background-color: rgba(255, 255, 125, 0.5);
+}
+
+.searchbox3 {
+	
+}
+
+.searchbox3 td {
+	font-size: 20px;
+	nowrap;
+	font-style: italic;	
+	color: rgba(0, 0, 0, 0.5);
+	text-align: right;
+}
+
+.searchbox4 {
+	
+}
+
+
+
+.menubtnaslnk {
+	background: none; 
+	border-left-width: 0;
+	border-top-width: 0;
+	border-right-width: 0;
+	border-bottom-width: 1px;
+	margin: 10px 10px 10px 10px;
+	font: inherit;
+	style: bold;
+	cursor: pointer;
+}
+
+
+.mainList {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+/*	margin: 45px;
+	width: 480px;
+*/	text-align: left;
+	border-collapse: collapse;
+}
+
+.mainList th {
+	font-size: 13px;
+	font-weight: normal;
+	padding: 8px;
+	background: #a5d5e7;
+	border-top: 1px solid #8ae1df;
+	border-bottom: 1px solid #8ae1df;
+	color: #039;
+}
+.sortArrow {
+	color: rgba(255, 0, 0, 0.5);
+}
+.btnaslnk {
+	background: #a5d5e7; 
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+}
+
+.mainList td {
+	font-size: 13px;
+	padding: 8px;
+	background: #e1f1f7; 
+	border-bottom: 1px solid #dfdfdf;
+	color: #669;
+	border-top: 1px solid transparent;
+}
+.mainList tr:hover td
+{
+	background: #c8e6f0;
+	color: #339;
+}
+
+.linkWrap
+{
+	color: rgba(255, 0, 0, 0.5);
+	padding: 8px;
+	font-weight: normal;
+	font-style: italic;
+	font-size: 13px;
+}
+
+.detailProvider {
+	background-color: rgba(30, 30,30, 0.2);
+}
+
+.detailProvider input {
+	background-color: rgba(255, 255, 255, 0.6);
+	color: rgba(0, 0, 0, 0.8);
+	font-style: bold;
+	float: left; 
+	clear: none;
+	height: 100%;
+	overflow: auto;	
+	border: none;
+	margin: 0 0 0 0;
+	border: none;
+}
+
+.detailProvider input:hover
+{
+	background:  rgba(255, 255, 200, 0.3);
+	
+}
+
+.reset {
+	background-color: inherit;
+	border: none;
+	color:  rgba(255, 0, 0, 0.9);
+	font-family: inherit;
+	cursor: pointer;
+	font-style: italic;
+}
+
+.SHError {
+	max-width: 400px;
+}
+
+.SHError td {
+	color: rgba(230, 0, 0, 1);
+}
+
+.container {
+	background-color: rgba(240, 240, 240, 1);
+	height: 4000px;  
+	margin: 10px auto 0 auto;
+}
+
+.menu {
+	background-color: rgba(0, 120, 120, 0.2);
+	/*	float: left; */
+	clear: none;
+	height: 50px;
+	overflow: auto;
+}
+
+.menu a {
+	text-decoration: none;
+	color: rgba(0, 0, 0, 0.8);
+	}
+
+.page {
+	background-color: rgba(240, 240, 240, 0.5);
+	/*	float: left; */
+	clear: none;
+	color: rgba(0, 0, 0, 0.4);
+	padding: 0 0 0 10px; /* top right bottom left  */
+}
+
+.menu2 {
+	background-color: rgba(0, 120, 120, 0.2);
+	float: left; 
+	clear: none;
+	height: 100%;
+	overflow: auto;
+	max-width: 200px;
+}
+
+.menu2 a {
+	text-decoration: none;
+	color: rgba(0, 0, 0, 0.8);
+}
+
+.page2 {
+	padding: 10px 10px 10px 10px; /* top right bottom left  */
+	margin: 10px 10px 10px 10px;
+	float: top; 
+	clear: none;
+	height: auto; 
+	width: auto;
+	overflow: auto;
+	color: rgba(0, 0, 0, 0.4);
+}
+
+.formButtons {
+	background-color: rgba(0, 120, 120, 0.2);
+}
+
+.formButtons input {
+	color: rgba(0, 0, 0, 0.8);
+	font-style: bold;
+	margin: 10px 10px 10px 10px;
+	background-color: rgba(160, 240, 240, 0.7);
+	float: left; 
+	clear: none;
+	height: 100%;
+	overflow: auto;
+	border: none;
+}
+
+.formButtons input:hover
+{
+	background:  rgba(255, 255, 200, 0.3);
+	
+}
+
+.binary {
+	background-color: rgba(30, 30,30, 0.2);
+}
+
+.binary input {
+	background-color: rgba(255, 255, 255, 0.6);
+	float: left; 
+	clear: none;
+	height: 100%;
+	overflow: auto;	
+	border: none;
+}
+
+.binary input:hover
+{
+	background:  rgba(255, 255, 200, 0.3);
+	
+}
+
+.status {
+	color: rgba(0, 120, 120, 0.9);
+	background-color: rgba(180, 255, 100, 0.9);
+}
+
+.perror {
+	background-color: rgba(0, 120, 120, 0.2);
+}
+
+.perror td {
+	color: rgba(255, 0, 0, 1);
+}
