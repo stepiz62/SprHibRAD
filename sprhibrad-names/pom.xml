@@ -5,8 +5,9 @@
 	<artifactId>sprhibrad-names</artifactId>
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
-	<description>A small lib for naming - shared by both SprHibRAD framework and generator - Stefano Pizzocaro - 62</description>
 	<name>SprHibRAD Names</name>
+	<description>A small lib for naming - shared by both SprHibRAD framework and generator - Stefano Pizzocaro - 62</description>
+	<url>https://github.com/stepiz62/SprHibRAD/tree/master/sprhibrad-names</url>
 	<build>
 		<plugins>
 			<plugin>
@@ -19,4 +20,23 @@
 			</plugin>
 		</plugins>
 	</build>
+	<licenses>
+		<license>
+			<name>The GNU Lesser General Public License, version 3</name>
+			<url>http://www.gnu.org/licenses/lgpl.txt</url>
+		</license>
+	</licenses>
+	<developers>
+		<developer>
+			<name>Stefano Pizzocaro</name>
+			<email>stefano.pizzocaro@mail.com</email>
+			<organization>stepiz62.com</organization>
+			<organizationUrl>http://www.stepiz62.com</organizationUrl>
+		</developer>
+	</developers>
+	<scm>
+		<connection>scm:git:git://github.com/stepiz62/SprHibRAD.git</connection>
+		<developerConnection>scm:git:ssh://github.com:stepiz62/SprHibRAD.git</developerConnection>
+		<url>https://github.com/stepiz62/SprHibRAD/tree/master/sprhibrad-names</url>
+	</scm>
 </project>
