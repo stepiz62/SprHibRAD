@@ -7,6 +7,7 @@
 	<packaging>jar</packaging>
 	<name>SprHibRAD Framework</name>
 	<description>The framework of the SprHibRAD suite - Stefano Pizzocaro - 62</description>
+	<url>https://github.com/stepiz62/SprHibRAD/tree/master/sprhibrad-framework</url>
 	<properties>
 		<springframework.version>4.3.6.RELEASE</springframework.version>
 		<hibernate.version>5.2.7.Final</hibernate.version>
@@ -114,4 +115,23 @@
 			</plugin>
 		</plugins>
 	</build>
+	<licenses>
+		<license>
+			<name>The GNU Lesser General Public License, version 3</name>
+			<url>http://www.gnu.org/licenses/lgpl.txt</url>
+		</license>
+	</licenses>
+	<developers>
+		<developer>
+			<name>Stefano Pizzocaro</name>
+			<email>stefano.pizzocaro@mail.com</email>
+			<organization>stepiz62.com</organization>
+			<organizationUrl>http://www.stepiz62.com</organizationUrl>
+		</developer>
+	</developers>
+	<scm>
+		<connection>scm:git:git://github.com/stepiz62/SprHibRAD.git</connection>
+		<developerConnection>scm:git:ssh://github.com:stepiz62/SprHibRAD.git</developerConnection>
+		<url>https://github.com/stepiz62/SprHibRAD/tree/master/sprhibrad-framework</url>
+	</scm>
 </project>
