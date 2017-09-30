@@ -1,5 +1,4 @@
 	Copyright (c) 2017, Stefano Pizzocaro. All rights reserved. Use is subject to license terms.
-	This file is part of SprHibRAD 1.0.
 	SprHibRAD 1.0 is free software: you can redistribute it and/or modify
 	it under the terms of the GNU Lesser General Public License as published by
 	the Free Software Foundation, either version 3 of the License, or
