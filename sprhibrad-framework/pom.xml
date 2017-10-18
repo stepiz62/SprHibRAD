@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.sprhibrad</groupId>
 	<artifactId>sprhibrad-framework</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<packaging>jar</packaging>
 	<name>SprHibRAD Framework</name>
 	<description>The framework of the SprHibRAD suite - Stefano Pizzocaro - 62</description>
@@ -88,9 +88,9 @@
 		</dependency>
 		
 		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<version>1.2.17</version>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.9.1</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.tika</groupId>

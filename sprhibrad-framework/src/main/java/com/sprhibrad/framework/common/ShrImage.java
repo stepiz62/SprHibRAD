@@ -28,7 +28,7 @@ import javax.imageio.ImageIO;
 import javax.imageio.ImageReader;
 import javax.imageio.stream.ImageInputStream;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 public class ShrImage {
 
@@ -53,7 +53,7 @@ public class ShrImage {
 				if (iter.hasNext())
 					reader = (ImageReader) iter.next();
 				if (reader == null)
-					Logger.getLogger(getClass()).error("Not a valid image (path=" + imageField + "!");
+					LogManager.getLogger(getClass()).error("Not a valid image (path=" + imageField + "!");
 				else {
 					formatName = reader.getFormatName();
 					if ( ! onlyFormatName)
