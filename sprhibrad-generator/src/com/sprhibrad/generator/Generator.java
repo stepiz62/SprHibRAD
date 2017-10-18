@@ -253,7 +253,7 @@ public class Generator {
 			copyFile("WebContent/WEB-INF/views", "sessionexp.jsp", "");
 			copyFile("WebContent/WEB-INF/views", "uploadBinary.jsp", "");
 			copyFile("WebContent/WEB-INF/views", "userPrefs_form.jsp", "");
-			copyFile("WebContent/WEB-INF", "log4j.xml", "");
+			copyFile("WebContent/WEB-INF", "log4j2.xml", "");
 			copyFile("WebContent/WEB-INF", "SprHibRad.tld", "");
 			copyFile("WebContent/META-INF", "MANIFEST.MF", "");
 			copyFile(".settings", "org.eclipse.jdt.core.prefs", "");
@@ -488,6 +488,7 @@ public class Generator {
 	}
 	
 	public void generate()  {
+		app.long_op_success = true;
 		app.setWaitCursor(true);
 		init(true);
 		ShrgFileWriter pomFileWriter = null;
@@ -597,10 +598,8 @@ public class Generator {
 				storeMessage("attr.locale=Language and country");
 				storeMessage("attr.hmenu=Menu position");
 			}
-			
-			app.outToConsole("Code generation : Success !");
 		} catch (Exception e) {
-			app.outToConsole("Code generation : FAILURE !");
+			app.long_op_success = false;
 		} finally {
 			packagesMap.forEach(new BiConsumer<String, Map<String, ShrgFileWriter>>() {
 				@Override
@@ -617,6 +616,7 @@ public class Generator {
 			closeFile(eclipseProjectFileWriter);
 			closeFile(eclipseComponentFileWriter);
 		}
+		app.outToConsole("Code generation : " + (app.long_op_success ? "Success" : "FAILURE") + " !");
 		app.setWaitCursor(false);
 	}
 	
@@ -649,7 +649,7 @@ public class Generator {
 		write(applicationConf_writer, "");
 		write(applicationConf_writer, "#Session");
 		write(applicationConf_writer, "session.maxInactiveMinutes = " + app.txtSessionMaxInactiveMinutes.getText());
-}
+	}
 
 	private void setConfigurationClassesInjectors(JSONObject entities) {
 		configWriters.get("Initializer").addInjector(new Injector() {

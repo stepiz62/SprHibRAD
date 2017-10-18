@@ -382,6 +382,8 @@ public class SprHibRadGen {
 
 	private ShrgObject classSpecificDictio;
 
+	boolean long_op_success;
+
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -2151,6 +2153,7 @@ public class SprHibRadGen {
 
 	public void outToConsole(Exception e) {
 		e.printStackTrace();
+		app.long_op_success = false;
 		outToConsole(console2, e.toString());
 	}
 

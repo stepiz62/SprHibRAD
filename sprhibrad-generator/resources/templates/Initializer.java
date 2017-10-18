@@ -1,17 +1,22 @@
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 
-import org.apache.log4j.Logger;
-import org.apache.log4j.xml.DOMConfigurator;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.core.config.ConfigurationSource;
+import org.apache.logging.log4j.core.config.Configurator;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 import com.sprhibrad.framework.configuration.MenuConfig;
 import com.sprhibrad.framework.configuration.ShrConfigurator;
+
+import mysamples.myclinic.configuration.Initializer;
 
 public class Initializer  extends AbstractAnnotationConfigDispatcherServletInitializer  {
 
@@ -29,8 +34,14 @@ public class Initializer  extends AbstractAnnotationConfigDispatcherServletIniti
 			public void sessionDestroyed(HttpSessionEvent arg0) {
 			}
 			});
-        DOMConfigurator.configure(servletContext.getRealPath("") + File.separator + "WEB-INF/log4j.xml");
-        Logger.getLogger(Initializer.class).info("log4j configured !");
+   		ConfigurationSource source = null;
+		try {
+			source = new ConfigurationSource(new FileInputStream(servletContext.getRealPath("") + File.separator + "WEB-INF/log4j2.xml"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+   		Configurator.initialize(null, source);        
+        LogManager.getLogger(Initializer.class).info("log4j configured !");
  
         MenuConfig menuConfig = new MenuConfig();
         buildMenu(menuConfig);
