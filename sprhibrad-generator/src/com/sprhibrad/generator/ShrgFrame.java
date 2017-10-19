@@ -28,7 +28,7 @@ import javax.swing.JPanel;
 public class ShrgFrame extends JFrame {
 
 	private JPanel contentPane;
-	
+	final public String version="1.0.1";
 	SprHibRadGen mainWindow;
 
 	/**
@@ -37,7 +37,7 @@ public class ShrgFrame extends JFrame {
 	public ShrgFrame(SprHibRadGen mainWindow) {
 		super();
 		this.mainWindow = mainWindow;
-		this.setTitle("SprHibRAD Generator v. 1.0.0");
+		this.setTitle("SprHibRAD Generator v. " + version);
 		this.addWindowListener(new WindowAdapter() {
 
 			@Override

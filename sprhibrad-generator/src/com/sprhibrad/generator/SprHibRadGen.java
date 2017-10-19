@@ -1427,7 +1427,7 @@ public class SprHibRadGen {
 			public void actionPerformed(ActionEvent e) {
 				console.setText(null);
 				console2.setText(null);
-				outToConsole("SprHibRAD Generator 1.0.0");
+				outToConsole("SprHibRAD Generator " + mainFrame.version);
 				outToConsole("Licensed under LGPL");
 				outToConsole("@2017 Stefano Pizzocaro ");
 				console2.setText("As part of the SprHibRAD Suite, it is the tool for building an entire Dynamic Web Application based on SprHibRAD Framework.");

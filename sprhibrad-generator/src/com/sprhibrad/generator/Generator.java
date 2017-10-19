@@ -1618,6 +1618,7 @@ public class Generator {
 
 		write(writer, "");
 		write(writer, "@Entity");
+		write(writer, "@Table(name = \"" + entityName + "\")");
 		write(writer, "public class " + toClassName(entityName) + 
 						(isVerboseLiteral ? " extends VerboseLiteral" : 
 							(" implements ShrEntity" + (usersTable ? ", UserTable" : ""))) + " {" );
