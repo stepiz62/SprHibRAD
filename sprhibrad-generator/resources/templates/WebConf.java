@@ -1,5 +1,8 @@
 
+import java.io.IOException;
 import java.math.BigDecimal;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Properties;
@@ -58,6 +61,9 @@ import com.sprhibrad.framework.configuration.ShrDateFormatter;
 import com.sprhibrad.framework.configuration.ShrRequestMappingHandlerAdapter;
 import com.sprhibrad.framework.configuration.ShrResourceBundleMessageSource;
 import com.sprhibrad.framework.converter.LangConverter;
+
+import mysamples.myclinic.configuration.BirtEngineFactory;
+
 import com.sprhibrad.framework.configuration.UserManager;
 import com.sprhibrad.framework.controller.BirtViewFactory;
 import com.sprhibrad.framework.controller.ShrBirtView;
@@ -286,7 +292,7 @@ public class WebConf extends WebMvcConfigurationSupport {
 		return br; 
 	} 
 
-	// the methods above are to make effectively the class annotation-inherited --- DON'T REMOVE
+	// the methods above are to make the class effectively annotation-inherited --- DON'T REMOVE THEM
 	
 	@Bean
     public UserManager userManager() {
@@ -309,7 +315,7 @@ public class WebConf extends WebMvcConfigurationSupport {
 	@Lazy
 	public BirtView birtView(){ 
 		BirtView bv = new BirtView(); 
-		bv.setBirtEngine( this.engine().getObject() );
+		bv.setBirtEngine( engine().getObject() );
 		return bv; 
 	}
 
@@ -318,8 +324,14 @@ public class WebConf extends WebMvcConfigurationSupport {
 	protected BirtEngineFactory engine(){ 
 		BirtEngineFactory factory = new BirtEngineFactory() ;  
 		factory.setLogLevel( Level.WARNING);
-		factory.setLogDirectory( new FileSystemResource(env.getRequiredProperty("birt.logDir")));
-
+		String logPath = env.getRequiredProperty("birt.logDir");
+		if (Files.notExists(Paths.get(logPath)))
+			try {
+				Files.createDirectories(Paths.get(logPath));
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		factory.setLogDirectory(new FileSystemResource(logPath));
 		return factory ; 
 	}
 
