@@ -593,6 +593,7 @@ public class Generator {
 			});
 
 			if (app.withLanguageFile()) {
+				storeMessage("entity.userPrefs=User's preferences");
 				storeMessage("attr.menuAtTheTop=at the top");
 				storeMessage("attr.menuOnTheLeft=on the left");
 				storeMessage("attr.locale=Language and country");
