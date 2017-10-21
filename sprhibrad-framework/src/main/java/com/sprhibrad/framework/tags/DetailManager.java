@@ -37,7 +37,7 @@ import com.sprhibrad.names.Names;
  * renderer gets them from the request object.
  * 
  * An important attribute is {@code viewProperty} that, when the details entity
- * is a 'relation' entity, states that the {@code property} attribute represent
+ * is a 'relation' entity, states that the {@code property} attribute represents
  * the target entity for the row command of the grid.
  */
 
