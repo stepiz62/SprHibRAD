@@ -655,6 +655,14 @@ public class Generator {
 		configWriters.get("Initializer").addInjector(new Injector() {
 			@Override
 			public void inject(ShrgFileWriter writer) {
+				writer.setIndentationCount(0);
+				write(writer, "import " + app.targetPackage + ".configuration.Initializer");
+				write(writer, "");
+			}
+		});
+		configWriters.get("Initializer").addInjector(new Injector() {
+			@Override
+			public void inject(ShrgFileWriter writer) {
 				writer.setIndentationCount(2);
 				JSONArray menuEntities = (JSONArray) project.get("menuEntities");
 				for (Object object : menuEntities)	 
@@ -662,7 +670,7 @@ public class Generator {
 							+ "\", null)");
 			}
 		});
-		
+
 		Vector<String> verboseLiterals = new Vector<String>();
 		Vector<String> printables = new Vector<String>();
 		entities.forEach(new BiConsumer<String, JSONObject>() {
@@ -689,6 +697,14 @@ public class Generator {
 				}
 			}
 		});		
+		configWriters.get("WebConf").addInjector(new Injector() {
+			@Override
+			public void inject(ShrgFileWriter writer) {
+				writer.setIndentationCount(0);
+				write(writer, "import " + app.targetPackage + ".configuration.BirtEngineFactory");
+				write(writer, "");
+			}
+		});
 		addOneRowInjector("WebConf", "@ComponentScan(basePackages = \"" + app.targetPackage + ",com.sprhibrad\")", 0);
 		configWriters.get("WebConf").addInjector(new Injector() {
 			@Override

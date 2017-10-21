@@ -16,7 +16,7 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 import com.sprhibrad.framework.configuration.MenuConfig;
 import com.sprhibrad.framework.configuration.ShrConfigurator;
 
-import mysamples.myclinic.configuration.Initializer;
+§
 
 public class Initializer  extends AbstractAnnotationConfigDispatcherServletInitializer  {
 

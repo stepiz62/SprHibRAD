@@ -227,6 +227,7 @@ public class Umanager {
 		try {
 			stmnt = app.conn.prepareStatement(sql);
 			stmnt.executeUpdate();
+			app.outToConsole(sql);
 		} catch (SQLException e) {
 			if (manageException)
 				app.outToConsole(e);
@@ -256,6 +257,7 @@ public class Umanager {
 				app.lstRoleNames.add(getStrValue(result));	
 		}
 	}
+	
 	public boolean removeRole(String selectedItem) {
 		boolean retVal = selectedItem != null;
 		if (retVal) 

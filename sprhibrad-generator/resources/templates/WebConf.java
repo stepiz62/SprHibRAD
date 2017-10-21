@@ -62,7 +62,7 @@ import com.sprhibrad.framework.configuration.ShrRequestMappingHandlerAdapter;
 import com.sprhibrad.framework.configuration.ShrResourceBundleMessageSource;
 import com.sprhibrad.framework.converter.LangConverter;
 
-import mysamples.myclinic.configuration.BirtEngineFactory;
+§
 
 import com.sprhibrad.framework.configuration.UserManager;
 import com.sprhibrad.framework.controller.BirtViewFactory;
