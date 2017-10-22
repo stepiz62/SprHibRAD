@@ -120,7 +120,7 @@
 		<dependency>
 			<groupId>com.sprhibrad</groupId>
 			<artifactId>sprhibrad-framework</artifactId>
-			<version>1.0.0</version>
+			<version>1.0.1</version>
 		</dependency>
 		<!-- uncomment birt dependency for development -->
 		<dependency> 
