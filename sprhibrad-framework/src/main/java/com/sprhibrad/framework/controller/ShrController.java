@@ -733,7 +733,7 @@ public abstract class ShrController<T extends ShrEntity> {
 		String operator = (String) request.getParameter(operatorTagId);
 		if (operator==null)  /* "back to list" management */
 			operator = (String) request.getAttribute(operatorTagId);
-		if (object != null || operator.compareTo("N") == 0 || operator.compareTo("NN") == 0) {
+		if (object != null || operator != null && (operator.compareTo("N") == 0 || operator.compareTo("NN") == 0)) {
 			if (operator==null)
 				operator = "";
 			String user = getUser(request);

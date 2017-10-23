@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.sprhibrad</groupId>
 	<artifactId>sprhibrad-framework</artifactId>
-	<version>1.0.1</version>
+	<version>1.0.2</version>
 	<packaging>jar</packaging>
 	<name>SprHibRAD Framework</name>
 	<description>The framework of the SprHibRAD suite - Stefano Pizzocaro - 62</description>

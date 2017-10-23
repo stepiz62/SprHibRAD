@@ -55,6 +55,8 @@ public class SearchCriterion extends TermTag {
 			String opValue = (String) request().getParameter(opTagId);
 			if (opValue==null) /* "back to list" management */
 				opValue = (String) request().getAttribute(opTagId); 
+			if (opValue != null && opValue.compareTo("null") == 0)  /* page change after "back to list" management */
+				opValue = "";
 			output.append(isEditable() ? ("<select " + Utils.idAndNameAttrs(opTagId) + ">"
 										+ optionTag(opValue, "", "")
 										+ optionTag(opValue, ">", ">")
