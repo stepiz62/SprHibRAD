@@ -761,9 +761,9 @@ public class Generator {
 				write(writer, "\"SELECT " + usersTable + "." + userName
 						+ " username, CONCAT('ROLE_', " + rolesTable + "." + roleName + ") role \" +", true);
 				write(writer, "\"FROM " + usersTable + " \" +", true);
-				write(writer, "\"INNER JOIN " + userRolesTable + " ON " + usersTable + ".id = " 
+				write(writer, "\"LEFT JOIN " + userRolesTable + " ON " + usersTable + ".id = " 
 							+ userRolesTable + "." + userFk + " \" +", true);
-				write(writer, "\"INNER JOIN " + rolesTable + " ON " + rolesTable + ".id = " + 
+				write(writer, "\"LEFT JOIN " + rolesTable + " ON " + rolesTable + ".id = " + 
 							userRolesTable + "." + roleFk + " \" +", true);
 				write(writer, "\"where " + usersTable + "." + userName + " =?\")", true);
 			}

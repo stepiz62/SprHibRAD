@@ -28,7 +28,7 @@ import javax.swing.JPanel;
 public class ShrgFrame extends JFrame {
 
 	private JPanel contentPane;
-	final public String version="1.0.1";
+	final public String version="1.0.2";
 	SprHibRadGen mainWindow;
 
 	/**
