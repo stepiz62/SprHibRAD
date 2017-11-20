@@ -28,7 +28,7 @@ import java.lang.annotation.Target;
 /**
  * Informs the framework that the field must be resolved in the dictionary by
  * prefixing its name with the className (by default all the fields with the same name
- * resolved to the same translation)
+ * resolve to the same translation)
  */
 @Retention(RUNTIME)
 @Target(FIELD)
