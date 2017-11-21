@@ -200,7 +200,7 @@ public class WebConf extends WebMvcConfigurationSupport {
 		return new ShrRequestMappingHandlerAdapter();
 	}
 
-	// the methods above are to make effectively the class annotation-inherited --- DON'T REMOVE
+	// the methods below are to make effectively the class "inheriting" annotations from the parent --- DON'T REMOVE THEM
 
 	@Bean
 	public RequestMappingHandlerMapping requestMappingHandlerMapping() {
@@ -292,7 +292,7 @@ public class WebConf extends WebMvcConfigurationSupport {
 		return br; 
 	} 
 
-	// the methods above are to make the class effectively annotation-inherited --- DON'T REMOVE THEM
+	// the methods above are to make effectively the class "inheriting" annotations from the parent --- DON'T REMOVE THEM
 	
 	@Bean
     public UserManager userManager() {
