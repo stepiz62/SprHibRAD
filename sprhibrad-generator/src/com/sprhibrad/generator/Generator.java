@@ -775,6 +775,7 @@ public class Generator {
 				entities.forEach(new BiConsumer<String, JSONObject>() {
 					@Override
 					public void accept(String entityName, JSONObject entityObj) {
+						Map<String, Vector<String>> matrix = new HashMap<String, Vector<String>>();
 						JSONObject roles = (JSONObject) app.shrgJsonPeeker.peek(entityObj, new String[] {"roles"}).hostingObj;
 						if (roles != null) {
 							roles.forEach(new BiConsumer<String, JSONObject>() {
@@ -785,14 +786,33 @@ public class Generator {
 										roleAccessModes.forEach(new BiConsumer<String, JSONObject>() {
 											@Override
 											public void accept(String roleAccessMode, JSONObject roleAccessModeObj) {
-												write(writer, ".antMatchers(\"/" + entityName + "/" + roleAccessMode + "/**\").hasRole(\"" + role + "\")", true);
+												if (matrix.get(roleAccessMode) == null)
+													matrix.put(roleAccessMode, new Vector<String>());
+												matrix.get(roleAccessMode).add(role);
 											}
 										});
-									else
-										write(writer, ".antMatchers(\"/" + entityName + "/**\").hasRole(\"" + role + "\")", true);
+									else {
+										if (matrix.get("-") == null)
+											matrix.put("-", new Vector<String>());
+										matrix.get("-").add(role);
+										
+									}
 								}
 							});
-						}						
+						}		
+						matrix.forEach(new BiConsumer<String, Vector<String>>() {
+							@Override
+							public void accept(String accessMode, Vector<String> requiredRoles) {
+								StringBuilder rolesArgument = new StringBuilder();
+								for (String role : requiredRoles) {
+									if (rolesArgument.length() > 0)
+										rolesArgument.append(",");
+									rolesArgument.append(role);
+								}
+								String path = "/" + entityName + (accessMode.compareTo("-")== 0 ? "" : ( "/" + accessMode)) + "/**"; 
+								write(writer, ".antMatchers(\"" + path + "\").hasAnyRole(\"" + rolesArgument.toString() + "\")", true);								
+							}							
+						});
 					}
 				}
 				);				

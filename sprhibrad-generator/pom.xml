@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.sprhibrad</groupId>
 	<artifactId>sprhibrad-generator</artifactId>
-	<version>1.0.2</version>
+	<version>1.0.3</version>
 	<packaging>jar</packaging>
 	<name>SprHibRAD Generator</name>
 	<description>The generator of the SprHibRAD suite - Stefano Pizzocaro - 62</description>

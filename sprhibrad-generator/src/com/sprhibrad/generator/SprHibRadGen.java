@@ -75,6 +75,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import com.sprhibrad.generator.ShrgComboBox.FeedingFilter;
 import com.sprhibrad.generator.ShrgJsonPeeker.RetVal;
 import com.sprhibrad.generator.ShrgList.Projection;
+import java.awt.SystemColor;
 
 /**
  * Editable with WindowBuilder, the class renders a hierarchy-structured
@@ -1079,11 +1080,11 @@ public class SprHibRadGen {
 		panel_2.add(cmbChildFk);
 		
 		JTextArea txtrBeSureTo = new JTextArea();
-		txtrBeSureTo.setBackground(Color.ORANGE);
+		txtrBeSureTo.setEnabled(false);
+		txtrBeSureTo.setBackground(SystemColor.controlShadow);
 		txtrBeSureTo.setEditable(false);
 		txtrBeSureTo.setForeground(Color.BLACK);
 		txtrBeSureTo.setFont(new Font("Tahoma", Font.PLAIN, 11));
-		txtrBeSureTo.setEnabled(false);
 		txtrBeSureTo.setWrapStyleWord(true);
 		txtrBeSureTo.setLineWrap(true);
 		txtrBeSureTo.setText("Be sure to have already defined the foreign keys and associated field target entities, for every entity chosen as child entity. If not do it by selecting the entity in the main drop down list and select the 'Main' tab-pane. ");
