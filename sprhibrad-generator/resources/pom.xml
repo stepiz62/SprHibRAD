@@ -5,7 +5,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<properties>
-		<springframework.version>4.3.6.RELEASE</springframework.version>
+		<springframework.version>4.3.18.RELEASE</springframework.version>
 		<hibernate.version>5.2.7.Final</hibernate.version>
 		<mysql.connector.version>5.1.31</mysql.connector.version>
 	</properties>
@@ -120,7 +120,7 @@
 		<dependency>
 			<groupId>com.sprhibrad</groupId>
 			<artifactId>sprhibrad-framework</artifactId>
-			<version>1.0.2</version>
+			<version>1.0.3</version>
 		</dependency>
 		<!-- uncomment birt dependency for development -->
 		<dependency> 

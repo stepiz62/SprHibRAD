@@ -9,7 +9,7 @@
 	<description>The generator of the SprHibRAD suite - Stefano Pizzocaro - 62</description>
 	<url>https://github.com/stepiz62/SprHibRAD/tree/master/sprhibrad-generator</url>
 	<properties>
-		<springframework.version>4.3.6.RELEASE</springframework.version>
+		<springframework.version>4.3.18.RELEASE</springframework.version>
 	</properties>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
